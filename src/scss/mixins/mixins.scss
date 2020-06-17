@@ -1,0 +1,26 @@
+@mixin fontLight {
+    font-family: stcFontLight;
+}
+
+@mixin fontStc {
+    font-family: stcFont;
+}
+
+@mixin boldFont {
+    font-family: 'stcFontBold';
+}
+
+@mixin rounded {
+    border-radius: 2px 2px 2px 2px !important;
+}
+
+@mixin mixOverlayButton {
+    width: 160px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 0 auto;
+}

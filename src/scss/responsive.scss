@@ -1,0 +1,76 @@
+@import './variables/variables';
+@import './mixins/mixins';
+
+@media only screen and (max-device-width: 480px) {
+    body {
+        font-size: 12px !important;
+    }
+    .px-70 {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+
+    /*BANNER BUTTON*/
+    .homePosters .overlay {
+        left:30px;
+        width: 100%;
+    }
+    .btnBook,
+    .bannerBtnTrailerPurple,
+    .bannerBtn {
+        width: 125px;
+        height: 40px;
+        text-align: center;
+        font-size: 14px;
+    }
+    .btnTrailer,
+    .bannerBtnTrailer {
+        width: 125px;
+        height: 40px;
+        text-align: center;
+        font-size: 12px;
+    }
+    .iconsCenter  {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    /*FOOTER*/
+    .subscribeInput {
+        font-size: 12px !important;
+        height: 40px !important;
+        width: 190px !important;
+    }
+    .subscribeBtn {
+        font-size: 12px !important;
+        height: 40px !important;
+        width: 90px !important;
+    }
+}
+
+@media only screen and (max-width: 1440px) and (min-width: 768px) {
+    .bannerBtn {
+        width: 194px;
+        height: 55px;
+        text-align: center;
+    }
+    .bannerBtnTrailer {
+        width: 194px;
+        height: 55px;
+        text-align: center;
+    }
+    .bannerBtnTrailerPurple {
+        width: 194px;
+        height: 55px;
+    }
+    .btnBook {
+        width: 194px;
+        height: 55px;
+        text-align: center;
+    }
+    .btnTrailer {
+        width: 194px;
+        height: 55px;
+        text-align: center;
+    }
+}

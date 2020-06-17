@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="148" height="148" viewBox="0 0 148 148">
+  <g id="Group_885" data-name="Group 885" transform="translate(-636 -418)">
+    <rect id="Rectangle_1095" data-name="Rectangle 1095" width="148" height="148" rx="15" transform="translate(636 418)" fill="#f3f3f3"/>
+    <path id="Icon_awesome-user-alt" data-name="Icon awesome-user-alt" d="M55.756,62.726A31.363,31.363,0,1,0,24.393,31.363,31.371,31.371,0,0,0,55.756,62.726ZM83.635,69.7h-12a37.913,37.913,0,0,1-31.755,0h-12A27.876,27.876,0,0,0,0,97.574v3.485a10.457,10.457,0,0,0,10.454,10.454h90.6a10.457,10.457,0,0,0,10.454-10.454V97.574A27.876,27.876,0,0,0,83.635,69.7Z" transform="translate(654 436.244)" fill="#b9b9b9"/>
+    <rect id="Rectangle_398" data-name="Rectangle 398" width="83" height="83" rx="15" transform="translate(669 453)" opacity="0.399"/>
+    <g id="Icon_material-photo-camera" data-name="Icon material-photo-camera" transform="translate(688.999 475.679)">
+      <path id="Path_170" data-name="Path 170" d="M26.59,19.895A6.695,6.695,0,1,1,19.895,13.2,6.695,6.695,0,0,1,26.59,19.895Z" transform="translate(1.027 1.027)" fill="#fff"/>
+      <path id="Path_171" data-name="Path 171" d="M17.645,3,13.816,7.184H7.184A4.2,4.2,0,0,0,3,11.369V36.474a4.2,4.2,0,0,0,4.184,4.184H40.659a4.2,4.2,0,0,0,4.184-4.184V11.369a4.2,4.2,0,0,0-4.184-4.184H34.027L30.2,3Zm6.276,31.382A10.461,10.461,0,1,1,34.382,23.922,10.465,10.465,0,0,1,23.922,34.382Z" transform="translate(-3 -3)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

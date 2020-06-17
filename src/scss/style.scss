@@ -1,0 +1,850 @@
+@import './variables/variables';
+@import './mixins/mixins';
+/*STC FONT*/
+@font-face {
+    font-family: 'stcFont';
+    src: url('../fonts/STCForward-Regular.otf');
+}
+
+@font-face {
+    font-family: 'stcFontBold';
+    src: url('../fonts/STCForward-Bold.otf');
+}
+
+@font-face {
+    font-family: 'stcFontLight';
+    src: url('../fonts/STCForward-Light.otf');
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'stcFont' !important;
+    overflow-x: hidden !important;
+    padding: 0 !important;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+.wrapper {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*SIGNIN INPUTS*/
+.inputs__field--text {
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    -webkit-box-ordinal-group: 3;
+    order: 2;
+    display: block;
+    width: 100%;
+    padding-top: 2px;
+    padding-bottom: 1px;
+    padding-left: 2px;
+    line-height: 17px;
+    -ms-flex-preferred-size: 26px;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    border-width: 0;
+    border-bottom: 2px solid #8D9AA0;
+    color: #000;
+    -webkit-transition-property: border, padding;
+    transition-property: border, padding;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    -webkit-transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.inputs__field--text:focus ~ .inputs__label, .inputs__field--text:valid ~ .inputs__label {
+    -webkit-transform: translate3d(0, 6px, 0) scale(0.75);
+    transform: translate3d(0, 6px, 0) scale(0.75);
+    color: #8E9AA0;
+    text-transform: uppercase;
+}
+.inputs__field--text:focus {
+    outline: 0;
+    padding-bottom: 0px;
+    border-bottom-color: #8e9aa0;
+    border-bottom-width: 2px;
+}
+.inputs__field--text:focus {
+    color: #4F0F8C;
+    border-bottom: 2px solid #4F0F8C;
+}
+.inputs__field--text:focus ~ .inputs__label {
+    color: #8e9aa0;
+}
+.inputs__label {
+    box-sizing: border-box;
+    color: #8D9AA0;
+    font-size: 12px;
+    position: relative;
+    top: -59px;
+    -webkit-box-ordinal-group: 2;
+    order: 1;
+    z-index: 1;
+    padding-left: 2px;
+    -webkit-transform: translate3d(0, 28px, 0) scale(1);
+    transform: translate3d(0, 28px, 0) scale(1);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    -webkit-transition-property: color, -webkit-transform;
+    transition-property: color, -webkit-transform;
+    transition-property: transform, color;
+    transition-property: transform, color, -webkit-transform;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    -webkit-transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    pointer-events: none;
+    -webkit-font-smoothing: antialiased;
+}
+.inputSuccessImg {
+    float:right;
+    margin-top: -5px;
+    right: 15px;
+    width: 25px;
+}
+.inputTicket {
+    border: none !important;
+    outline: none;
+    width: 60%;
+}
+.ticketingValue {
+    align-items: center;
+    border: 1px solid $dropDownBg;
+    border-radius: 2px;
+    display: inline-flex !important;
+    height: 55px;
+    justify-content: flex-start;
+    width: 100%;
+    padding-left: 3px;
+}
+.ticketSelect {
+    border: 1px solid $links;
+    height: 48px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.inputBackground {
+    background-color: $dropDownBg;
+}
+.eventTicketType {
+    font-size: 14px;
+}
+.bookingDetailsFixed {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 9999;
+}
+.ticketTypeBottom {
+    margin-bottom: 135px !important;
+}
+
+/* NAVIGATION BAR */
+.navbar {
+    background-color: $navBg;
+    height: 62px;
+}
+.navbar-brand {
+    width: 200px;
+}
+.logo {
+    width: 100px;
+}
+#basic-navbar-nav {
+    .nav-link {
+        color: #fff;
+        padding: 11px 8px 11px 8px;
+        font-size: 14px;
+        margin: 0 18px;
+    }
+}
+.px-70 {
+    padding-left: 70px !important;
+    padding-right: 70px !important;
+}
+.navbar-nav .dropdown-menu .dropdown-item {
+    font-size: 14px;
+}
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+    left: -128px;
+    margin-top: 9px !important;
+}
+.boldFont {
+    @include boldFont;
+}
+.text-underline {
+    text-decoration:underline !important;
+}
+.f-12 {
+    font-size: 12px;
+}
+.f-14 {
+    font-size: 14px;
+}
+.primaryTxt {
+    color: $links !important;
+}
+.secondaryTxt {
+    color: $navBg !important;
+}
+.textLabel {
+    color: $label;
+}
+.txtLight {
+    color: $lightGrey;
+}
+.txtDate {
+    color: #afafb1;
+}
+.primaryBg {
+    background-color:$links !important;
+}
+.secondaryBg {
+    background-color:$navBg;
+}
+.right-0 {
+    right:0;
+}
+.profilePic {
+    background-image: url('/images/Images/ProfilePic.png');
+    background-position: center;
+    background-size: contain;
+    border-radius: 4px;
+    height: 40px;
+    width: 40px;
+
+    .dropdown-toggle:empty::after {
+        content: none;
+    }
+}
+
+/*DROPDOWN*/
+.dropDownCustom {
+    height: 55px;
+    text-align: left;
+    width: 100%;
+}
+.dropDownCustom button {
+    background-color: $dropDownBg;
+    border-color: $dropDownBg;
+    color: $lightGrey;
+    font-size: 14px;
+    text-align: left;
+}
+.dropDownCustom button:focus,
+.dropDownCustom button:hover {
+    background-color: $dropDownBg !important;
+    border-color: $dropDownBg;
+    color: $lightGrey !important;
+}
+.dropDownCustom .btn-group-vertical > .btn:hover, 
+.btn-group > .btn:hover {
+    z-index: 999;
+}
+.dropDownCustom .dropdown-menu {
+    width: 100%;
+}
+.dropDownIcon {
+    bottom: 28px;
+    position: absolute;
+    right: 85px;
+    z-index: 9999;
+}
+.dropdown-toggle::after {
+    display: none !important;
+}
+.dropdown-toggle:focus {
+    border: 0 !important;
+    box-shadow: none !important;
+}
+#EventCategory ~ div .dropdown-item {
+    padding-left: 0;
+}
+#EventCategory ~ div label {
+    float: left !important;
+    padding-right: 25px;
+    padding-top: 2px;
+}
+#EventCategory ~ div label::before,
+#EventCategory ~ div label::after {
+    right: 0;
+    left: 88%;
+}
+#EventCategory {
+    padding-left: 30px;
+}
+.priceRange {
+    text-align: right;
+    left: 45px;
+}
+.bannerShade {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right,#1D252D,#0000);
+}
+.selectDate {
+    align-items: center;
+    border: 1px solid #dee2e6;
+    border-radius: 2px;
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    text-align: center;
+    width: 128px;
+}
+
+/*BORDER*/
+.borderInput {
+    border: 1px solid $links !important;
+}
+.borderTop {
+    border-top: 1px solid #dedede;
+}
+.borderBottom {
+    border-bottom: 1px solid #dedede;
+}
+.borderTxtLine:before,
+.borderTxtLine:after {
+    background-color: #dedede;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 35%;
+}
+.borderTxtLine:before {
+    right: 3em;
+    margin-left: -50%;
+}
+.borderTxtLine:after {
+    left: 3em;
+    margin-right: -50%;
+}
+.borderImg {
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+}
+.hrBorder {
+    border-bottom: 1px solid #dedede;
+    width: 161%;
+}
+.hrWidth {
+    width: 55%;
+}
+
+/*TABS*/
+#checkOutNav .nav-tabs .nav-item.nav-link {
+    color: #8e9aa0 !important;
+    font-size: 16px;
+    border-radius: 0px !important;
+    border: 0;
+    width: 50%;
+    padding-left:0;
+    padding-right:0;
+}
+.nav-item.nav-link:focus {
+    border-color: $navBg !important;
+    border-left:0 !important;
+    border-right:0 !important;
+    border-top:0 !important;
+}
+.nav-pills .nav-link.active {
+    color: #000 !important;
+    border-bottom: 2px solid #ff375e;
+}
+.customSignActive {
+    border-bottom: 3px solid #ff375e;
+}
+.customSignActive .activeBgChange {
+    background: transparent;
+    color: #ff375e !important;
+}
+#checkOutNav .nav-tabs .nav-item.nav-link.active {
+    background-color: transparent !important;
+    border-bottom: 3px solid #580092;
+    color: #580092 !important;
+    font-family: 'stcFontBold';
+}
+
+/*CUSTOM CHECKBOX*/
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+    background-color: #ff375e;
+}
+.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::before,
+.custom-control-label::before {
+    background-color: transparent;
+    border: 1px solid #ff375e;
+    padding: 8px;
+}
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
+    background-color: #ff375e;
+    border-radius: 2px;
+    padding: 9px;
+}
+/*MODAL*/
+.readMore {
+    cursor:pointer;
+}
+.borderStripe {
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+}
+
+/*DISPLAY PROPERTIES*/
+.d-inline-block {
+    display: inline-block !important;
+}
+
+/*STC BUTTON*/
+.signBtn {
+    background-color: #f3f3f0;
+    color: #8d9aa0;
+    border: 0;
+}
+.signInBtn {
+    background-color: $links;
+    font-size: 16px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    @include rounded;
+}
+.bannerBtn {
+    position: relative;
+    font-size: 18px;
+    background: #ff375e;
+    width: 250px;
+    height: 55px;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff !important;
+    border-radius: 2px;
+    transition: background-image 150ms ease;
+    z-index: 2;
+    cursor: pointer;
+}
+.bannerBtnTrailer {
+    position: relative;
+    font-size: 18px;
+    width: 250px;
+    height: 55px;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    color: #fff !important;
+    transition: background-image 150ms ease;
+    z-index: 2;
+    cursor: pointer;
+}
+.bannerBtnTrailer:hover {
+    color: $links !important;
+    border-color: #ff375e;
+}
+.bannerBtn:hover,
+.bannerBtnTrailer:hover {
+    @include boldFont;
+}
+.bannerBtnTrailer:hover img {
+    content: url('/images/Icons/playTrailerHover.svg');
+}
+.btnDisabled {
+    pointer-events: none;
+    opacity: .6;
+    background-color: #F3F3F1 !important;
+}
+.h-55 {
+    height:55px;
+}
+/*BANNER*/
+.EventListingPosters,
+.homePosters {
+    .overlay {
+        position: absolute;
+        bottom: 12%;
+        left: 70px;
+        width: 40%;
+    }
+}
+.overlayHover {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.47);
+    transition: .5s ease;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    border-radius: 2px;
+}
+.homeMoviePosters:hover .overlayHover {
+    opacity: 1;
+}
+.homeMoviePosters:hover {
+    border-radius: 2px;
+    transform: scale(1.1) !important;
+    transition: all .2s ease-in-out;
+    z-index: 1111;
+}
+.movieTitle {
+    font-size: calc(12px + 12 * ((100vw - 320px) / 680));
+    @include boldFont;
+}
+.thumbOnHover:hover .imgZoom {
+    border-radius: 2px;
+    transform: scale(1.1) !important;
+    transition: all .2s ease-in-out;
+    z-index: 1111;
+}
+
+/*CAROUSEL*/
+.swiper-pagination-bullet-active {
+    background-color: $links !important;
+    width: 16px !important;
+    height: 16px !important;
+    border-radius: 2px !important;
+}
+.swiper-pagination-bullet {
+    background-color: #e4e4e4;
+    width: 16px !important;
+    height: 16px !important;
+    border-radius: 2px !important;
+    margin-right:15px !important;
+}
+.swiper-pagination-bullet:focus {
+    border:0;
+}
+.imgZoom:hover .overlayHover {
+    opacity: 1 !important;
+}
+.posterMovie:hover .overlayHover {
+    opacity: 1 !important;
+}
+.posterRating {
+    float: right;
+    right: 10px;
+}
+.datePicker {
+    width: 130px;
+    height: 125px;
+}
+.customSwipePrev, .customSwipeNext {
+    position: relative;
+    width: 31px;
+    height: 31px;
+    border-radius: 2px;
+    border: 1px solid #ff375e;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-image 150ms ease;
+    top: -1px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+/*VIEW ALL*/
+.viewAll {
+    width: 101px;
+    height: 31px;
+    background-color: #ff375e;
+    display: -webkit-inline-flex;
+    display: -moz-inline-flex;
+    display: -ms-inline-flex;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/*HEADINGS*/
+.categoryTitle {
+    font-size: 36px;
+    color: #1D252D;
+    @include boldFont;
+}
+
+/*NAV TABS*/
+.eventsTopEventsTab, 
+.moviesNowShowingTab {
+    .nav-tabs {
+        border-bottom: none;
+    }
+
+    .nav-tabs .nav-link {
+        text-transform: uppercase;
+        border: none;
+        border-radius: 0;
+        color: #979797;
+        font-size:14px;
+        padding: 0 5px 0 0;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+        color: $links;
+        background-color: transparent;
+        border-bottom: 2px solid $links;
+        font-weight: 600;
+    }
+}
+.homeMoviePosters {
+    float: right;
+}
+.homeMoviePosters:hover .overlay {
+    opacity: 1;
+}
+.homeMoviePosters {
+    position: relative;
+    cursor: pointer;
+
+    .movieThmbnail {
+        border-radius: 10px;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: rgba(17, 37, 64, .5);
+        border-radius: 10px;
+        padding: 15px;
+        font-size: 12px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .overlayTitle {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .overlayIcons {
+            width: 14px;
+            margin-right: 6px;
+        }
+
+        .overlayTrailer {
+            @include mixOverlayButton;
+            background-color: transparent;
+            border: 2px solid #fff;
+            margin-bottom: 15px;
+
+            img {
+                width: 20px;
+                margin-right: 5px;
+            }
+        }
+
+        .overlayBook {
+            @include mixOverlayButton;
+            color: #fff;
+            background-color: $links;
+
+            img {
+                width: 20px;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+/*RANGE SLIDER*/
+.MuiSlider-trackInverted .MuiSlider-track {
+    background-color: transparent !important;
+}
+.MuiSlider-thumb {
+    background-color: $navBg !important;
+    border-radius: 2px !important;
+    height: 22px !important;
+    margin-top: -10px !important;
+    width: 21px !important;
+}
+.MuiSlider-rail {
+    height: 5px !important;
+}
+.MuiSlider-rail {
+    background-color: $links !important;
+}
+.MuiSlider-root span:nth-child(5) {
+    left: 5% !important;
+}
+.MuiSlider-root span:nth-child(7) {
+    left: 50% !important;
+}
+.MuiSlider-root span:nth-child(9) {
+    left: 95% !important;
+}
+
+/*LISTING POSTER*/
+.posterLineHeight {
+    line-height: 30px;
+}
+.posterTitle {
+    font-size: 18px;
+    color: $posterTitle;
+    text-transform: uppercase;
+}
+
+/*POSTER TRAILER*/
+.btnTrailer {
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    width: 250px;
+    height: 55px;
+    transition: background-image 150ms ease;
+    border: 1px solid #fff;
+    z-index: 2;
+    cursor: pointer;
+    border-radius: 2px;
+}
+.btnTrailer:hover {
+    color: #ff375e;
+    border: 1px solid #ff375e;
+    text-decoration:none;
+}
+.btnTrailer:hover img {
+    content: url('/images/Icons/playTrailerHover.svg');
+    width: 10px;
+}
+/*CHECKOUT SUMMARY*/
+.headerIcon {
+    width: 12px;
+    float: right;
+}
+.flip {
+    transform:scale(-1);
+}
+.bookingDetails {
+    background-repeat: no-repeat;
+    -webkit-box-shadow: 3px 3px 6px -2px rgba(0,0,0,0.26);
+    -moz-box-shadow: 3px 3px 6px -2px rgba(0,0,0,0.26);
+    box-shadow: 3px 3px 6px -2px rgba(0,0,0,0.26);
+    position: relative;
+}
+.bookingDetails::before {
+    background: url(/images/Images/checkoutBorder.png);
+    width: 40px;
+    height: 100%;
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: -6px;
+    z-index: 1;
+    background-repeat: repeat-y;
+}
+.summaryHeader {
+    background-color: #f6f6f6;
+}
+.selectedSeat {
+    align-items: center;
+    border: 1px solid #616161;
+    display: flex;
+    justify-content: center;
+    width: 22px;
+}
+.icons {
+    width:10px;
+}
+.imdbIcon {
+    width: 32px;
+}
+.prev {
+    transform: rotate(180deg);
+}
+#userPaymentSummary .borderImg {
+    display: none;
+}
+#userPaymentSummary .summaryHeader {
+    background-color: transparent !important;
+    padding: 0; 
+}
+#userPaymentSummary .summaryHeader h2 {
+    border-bottom: 1px solid $lightGrey;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+#userPaymentSummary #priceSummary {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/*FOOTER*/
+.subscribeInput {
+    height: 55px !important;
+    width: 365px !important;
+}
+.subscribeBtn {
+    background-color: $links !important;
+    border-radius:0 !important;
+    height: 55px !important;
+    width: 160px !important;
+}
+.br-ltb {
+    border-radius: 2px 0 0 2px !important;
+}
+.socialIcon {
+    height: 40px;
+    width: 40px;
+    margin-right: 5px;
+}
+.socialIconLogo {
+    position: absolute;
+    left: 20px;
+    height: 20px !important;
+}
+.fb {
+    border: 1px solid #415CB1;
+    color: $fb;
+}
+.google {
+    border: 1px solid #3C81F7;
+    color: $google;
+}
+.footerLogo {
+    width: 150px;
+}
